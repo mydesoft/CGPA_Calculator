@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="app.js" defer></script>
+    <title>CGPA Calculator</title>
+</head>
+<body class="mt-4 bg-info">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center text-white"><i class="fa fa-calculator text-white"></i> My <span class="text-white">CGPA</span> Calculator</h4>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4" id = "inputs-card-row">
+                <div class="card shadow-lg mt-3 p-3 bg-white rounded" id="inputs-card">
+                    <div class="card-body">
+                        <form id="add-to-list-form">
+                            <div class="form-group">
+                                <label for="course"><h5 class="text-info">Course</h5></label>
+                                <input type="text" class="form-control" id="course" placeholder="Enter Course">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="unit"><h5 class="text-info">Unit</h5></label>
+                                <select id="select-unit" class="form-control">
+                                    <option value="">Select Unit</option>
+                                    <option value="1" >1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="grade"><h5 class="text-info">Grade</h5></label>
+                                <select id="select-grade" class="form-control">
+                                    <option value="">Select Grade</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-info float-right" id="add-to-list-btn">+</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="col-md-5">
+                <div class="card shadow-lg p-3 bg-white rounded mt-3 bg-secondary">
+
+                        <h5 class="text-center text-info">Your Inputs for calculation</h5>
+                    
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class=" table table-striped table-bordered shadow-lg p-3 bg-white rounded">
+                                <thead>
+                                    <tr>
+                                        <td class="text-info"><h6>Courses</h6></td>
+                                        <td class="text-info"><h6>Units</h6></td>
+                                        <td class="text-info"><h6>Grades</h6></td>
+                                        <td></td>
+                                    </tr>
+        
+                                    
+                                </thead>
+        
+                                <tbody id="course-table-list">
+                                   
+                                    
+                                </tbody>
+        
+                                
+                            </table>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-danger btn-sm" disabled id="calculate-gpa-btn">Calcalate GPA</button>
+                        <button class="btn btn-info btn-sm float-right" disabled id="calculate-cgpa-btn">Calcalate CGPA</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 mt-3">
+                <div class="card" id="output">
+                    <div class="card-body">
+                        <div class="card bg-danger mt-3">
+                            <div class="card-body">
+                                <h4 class="text-white" id="gpa-output">GPA : 0.00</h4>
+                            </div>
+                        </div>
+
+                        <div class="card bg-warning mt-2">
+                            <div class="card-body">
+                                <h4 class="text-white" id="cgpa-output">CGPA : 0.00</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
